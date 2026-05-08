@@ -1,4 +1,5 @@
 import './App.css'
+import { BrowserRouter, Routes, Route, Link } from 'react-router'
 import { motion } from 'motion/react'
 import AnimatedButton from './components/AnimatedButton'
 import FeaturesList from './components/FeaturesList'
@@ -10,26 +11,39 @@ import LiveBadge from './components/LiveBadge'
 
 function App() {
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <h1>Hello World</h1>
-      </motion.div>
-      <div className='button-div'>
-        <AnimatedButton>Click Me!</AnimatedButton>
-        <AnimatedButton damping={0}>Infinite bounce</AnimatedButton>
+    <BrowserRouter>
+      <div className='app'>
+        <nav className='nav'>
+          <div className='nav-links'>
+            <Link to="/">Home</Link>
+            <Link to="">About</Link>
+            <Link to="">Contact</Link>
+          </div>
+        </nav>
       </div>
-      <FeaturesList></FeaturesList>
-      <DraggableCard></DraggableCard><br />
-      <DismissableAlert></DismissableAlert>
-      <StepSwitcher></StepSwitcher>
-      <CollabsibleList></CollabsibleList>
-      <LiveBadge></LiveBadge>
-    </>
+    </BrowserRouter>
   )
+}
+
+function HomePage() {
+  <>
+    <h2>Home</h2>
+    <p>Welcome!</p>
+  </>
+}
+
+function About() {
+  <>
+    <h2>About</h2>
+    <p>Welcome!</p>
+  </>
+}
+
+function Contact() {
+  <>
+    <h2>Contact</h2>
+    <p>Welcome!</p>
+  </>
 }
 
 export default App
