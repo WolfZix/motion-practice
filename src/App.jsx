@@ -6,6 +6,7 @@ import DraggableCard from './components/DraggableCard'
 import DismissableAlert from './components/DismissableAlert'
 import StepSwitcher from './components/StepSwitcher'
 import CollabsibleList from './components/CollabsibleList'
+import LiveBadge from './components/LiveBadge'
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <DismissableAlert></DismissableAlert>
       <StepSwitcher></StepSwitcher>
       <CollabsibleList></CollabsibleList>
+      <LiveBadge></LiveBadge>
     </>
   )
 }
