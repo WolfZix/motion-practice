@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://WolfZix.github.io/motion-practice",
+  "homepage": "https://WolfZix.github.io/projekt/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
